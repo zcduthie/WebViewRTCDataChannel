@@ -1,12 +1,15 @@
 use_frameworks!
 
+platform :ios, '11.0'
+
 target 'WebViewRTCDataChannel_Example' do
   pod 'WebViewRTCDataChannel', :path => '../'
+  pod 'Starscream', '~> 3.0.2'
 
   target 'WebViewRTCDataChannel_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0.2'
+    pod 'Nimble', '~> 7.3.4'
   end
 end

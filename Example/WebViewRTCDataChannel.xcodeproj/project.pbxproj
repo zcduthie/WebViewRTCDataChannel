@@ -14,7 +14,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		721D372D2259CF4500D62D98 /* Twilio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D372C2259CF4500D62D98 /* Twilio.swift */; };
 		72921A75BEEA5DBA2FBC9D29 /* Pods_WebViewRTCDataChannel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67770EA07267B40C489974D2 /* Pods_WebViewRTCDataChannel_Tests.framework */; };
+		72F49F55224F50190056DF29 /* DeadSimpleSignallingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F49F54224F50180056DF29 /* DeadSimpleSignallingChannel.swift */; };
+		72F49F56224F50190056DF29 /* DeadSimpleSignallingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F49F54224F50180056DF29 /* DeadSimpleSignallingChannel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +45,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64CA073FCE22EF7321F99A4A /* Pods-WebViewRTCDataChannel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewRTCDataChannel_Tests.release.xcconfig"; path = "Target Support Files/Pods-WebViewRTCDataChannel_Tests/Pods-WebViewRTCDataChannel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		67770EA07267B40C489974D2 /* Pods_WebViewRTCDataChannel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewRTCDataChannel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84944C96F744F610CA2CEA17 /* WebViewRTCDataChannel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WebViewRTCDataChannel.podspec; path = ../WebViewRTCDataChannel.podspec; sourceTree = "<group>"; };
-		9DBE61D182BC6E144C1BEC50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9E3A3A210BA2573EC3ECD35B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		721D372C2259CF4500D62D98 /* Twilio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twilio.swift; sourceTree = "<group>"; };
+		72F49F54224F50180056DF29 /* DeadSimpleSignallingChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadSimpleSignallingChannel.swift; sourceTree = "<group>"; };
+		84944C96F744F610CA2CEA17 /* WebViewRTCDataChannel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WebViewRTCDataChannel.podspec; path = ../WebViewRTCDataChannel.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DBE61D182BC6E144C1BEC50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9E3A3A210BA2573EC3ECD35B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F94E816F0180C5E02A5393D8 /* Pods-WebViewRTCDataChannel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewRTCDataChannel_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WebViewRTCDataChannel_Tests/Pods-WebViewRTCDataChannel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF34111C71FE2D37B6A37FCA /* Pods_WebViewRTCDataChannel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewRTCDataChannel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +98,8 @@
 		607FACD21AFB9204008FA782 /* Example for WebViewRTCDataChannel */ = {
 			isa = PBXGroup;
 			children = (
+				72F49F54224F50180056DF29 /* DeadSimpleSignallingChannel.swift */,
+				721D372C2259CF4500D62D98 /* Twilio.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -147,7 +154,6 @@
 				F94E816F0180C5E02A5393D8 /* Pods-WebViewRTCDataChannel_Tests.debug.xcconfig */,
 				64CA073FCE22EF7321F99A4A /* Pods-WebViewRTCDataChannel_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,10 +220,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LG6VA443R7;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LG6VA443R7;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -340,12 +348,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WebViewRTCDataChannel_Example/Pods-WebViewRTCDataChannel_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewRTCDataChannel/WebViewRTCDataChannel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewRTCDataChannel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +372,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				72F49F55224F50190056DF29 /* DeadSimpleSignallingChannel.swift in Sources */,
+				721D372D2259CF4500D62D98 /* Twilio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				72F49F56224F50190056DF29 /* DeadSimpleSignallingChannel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -507,7 +520,9 @@
 			baseConfigurationReference = 0D2BE373D54BCE9FE5CA004A /* Pods-WebViewRTCDataChannel_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LG6VA443R7;
 				INFOPLIST_FILE = WebViewRTCDataChannel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -522,7 +537,9 @@
 			baseConfigurationReference = 29C076751FBBCF89E270855F /* Pods-WebViewRTCDataChannel_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LG6VA443R7;
 				INFOPLIST_FILE = WebViewRTCDataChannel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -536,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F94E816F0180C5E02A5393D8 /* Pods-WebViewRTCDataChannel_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LG6VA443R7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -558,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64CA073FCE22EF7321F99A4A /* Pods-WebViewRTCDataChannel_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LG6VA443R7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

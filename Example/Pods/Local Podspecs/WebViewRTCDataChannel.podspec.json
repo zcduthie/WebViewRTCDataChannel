@@ -1,0 +1,28 @@
+{
+  "name": "WebViewRTCDataChannel",
+  "version": "0.1.0",
+  "summary": "A short description of WebViewRTCDataChannel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zcduthie/WebViewRTCDataChannel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zcduthie": "zac@e-d-s.net.au"
+  },
+  "source": {
+    "git": "https://github.com/zcduthie/WebViewRTCDataChannel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "WebViewRTCDataChannel/Classes/**/*",
+  "resource_bundles": {
+    "WebViewRTCDataChannel": [
+      "WebViewRTCDataChannel/Assets/datachannel.html",
+      "WebViewRTCDataChannel/Assets/datachannel.js"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+PODS:
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+  - Starscream (3.0.6)
+  - WebViewRTCDataChannel (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.3.4)
+  - Quick (~> 1.2.0)
+  - Starscream (~> 3.0.2)
+  - WebViewRTCDataChannel (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - Starscream
+
+EXTERNAL SOURCES:
+  WebViewRTCDataChannel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  WebViewRTCDataChannel: 17c4b4c33293f625e5faa010a31d6c77ad5d7e36
+
+PODFILE CHECKSUM: b300975cac988daac41d8ff1a2f6d6dd9e8ed922
+
+COCOAPODS: 1.6.0
