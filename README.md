@@ -15,7 +15,10 @@ The example included for this project is built as an end point to the 'as simple
 
 The [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project contains both a signaling server, and sample clients that can run and communicate through the server.
 
-The example included in this project acts as one of the clients. Follow the instructions given in the [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project to start a copy of the server and open one client, and then use this project's included example as the other client.
+The example included in this project acts as one of the clients. Follow the instructions given in the [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project to start a copy of the server and open one client, and then use this project's included example as the other client. You'll need to update the following line in ViewController.swift:
+```swift
+let WEBSOCKET_SERVER = "wss://10.0.0.30:8443"
+```
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -30,14 +33,14 @@ pod 'WebViewRTCDataChannel'
 
 ## Usage
 
-To create a data channel, first you'll need to fetch and provide ice candidates that include TURN servers.
+To create a data channel, first you'll need to fetch and provide ice servers that include TURN servers.
 ```swift
 // Fetch Ice Servers
-// Use Twilio helper (provided for convenience), or fetch yourself
+// Use Twilio helper (provided for convenience), or provide yourself
 Twilio.fetchNTSToken { (iceServers) in
     DispatchQueue.main.async { // data channel must be created on main thread
         createWebViewRTCDataChannel(withConfiguration: Configuration(iceServers: iceServers))
-        }
+    }
 }
 
 // Create an instance of the data channel
@@ -129,8 +132,9 @@ tldr; WebRTC is **fully supported in Safari**, and **partially supported in WKWe
 ## Roadmap
 
 As it currently stands, the project exposes a basic implementation of a WebRTC DataChannel through a WKWebView. Whilst the aim of the library is to be very basic, there are numerous improvements that can be made. Some of which include:
-- Update example to use a GUI that matches the Web GUI included in [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel)
 - Add convenient method for enabling / disabling logging
+- Update example to contain it's own README.md with better instructions
+- Update example to use a GUI that matches the Web GUI included in [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel)
 
 ## License
 
