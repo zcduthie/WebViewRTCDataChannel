@@ -13,9 +13,9 @@ Rather than include the external native WebRTC iOS framework at [https://webrtc.
 
 The example included for this project is built as an end point to the 'as simple as it gets' [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project.
 
-The WebRTC-Example-DataChannel project contains both a signaling server, and sample clients that can run and communicate through the server.
+The [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project contains both a signaling server, and sample clients that can run and communicate through the server.
 
-The example included in this project acts as one of the clients. Follow the instructions given in that project to start a copy of the server and open one client, and then use this example project as the other client.  
+The example included in this project acts as one of the clients. Follow the instructions given in the [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel) project to start a copy of the server and open one client, and then use this project's included example as the other client.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -72,6 +72,12 @@ Unfortunately for us, due to security reasons **WKWebView does not yet support M
 <br>
 
 tldr; WebRTC is **fully supported in Safari**, and **partially supported in WKWebView** (RTCDataChannel works via TURN)
+
+## Roadmap
+
+As it currently stands, the project exposes a basic implementation of a WebRTC DataChannel through a WKWebView. Whilst the aim of the library is to be very basic, there are numerous improvements that can be made. Some of which include:
+- Update example to use GUI that matches the Web GUI included in [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel)
+- Add convenient method for enabling / disabling logging
 
 ## License
 
