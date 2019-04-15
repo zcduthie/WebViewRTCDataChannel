@@ -182,7 +182,7 @@ This application makes use of the following third party libraries:
 
 ## WebViewRTCDataChannel
 
-Copyright (c) 2019 zcduthie <zac@e-d-s.net.au>
+Copyright (c) 2019 zcduthie
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

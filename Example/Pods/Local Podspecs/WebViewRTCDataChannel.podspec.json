@@ -1,20 +1,21 @@
 {
   "name": "WebViewRTCDataChannel",
   "version": "0.1.0",
-  "summary": "A short description of WebViewRTCDataChannel.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A simple working iOS RTCDataChannel built using WKWebView.",
+  "description": "Rather than include the external native WebRTC iOS framework at https://webrtc.org/native-code/ios, this library leverages WebKit's inbuilt WebRTC functionality and exposes WebRTC functionality through the WKWebView control.",
   "homepage": "https://github.com/zcduthie/WebViewRTCDataChannel",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "zcduthie": "zac@e-d-s.net.au"
+    "zcduthie": "zcduthie@gmail.com"
   },
   "source": {
     "git": "https://github.com/zcduthie/WebViewRTCDataChannel.git",
     "tag": "0.1.0"
   },
+  "swift_version": "4.2",
   "platforms": {
     "ios": "11.0"
   },

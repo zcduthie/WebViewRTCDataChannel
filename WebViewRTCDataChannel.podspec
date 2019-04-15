@@ -28,6 +28,8 @@ Rather than include the external native WebRTC iOS framework at https://webrtc.o
   s.source           = { :git => 'https://github.com/zcduthie/WebViewRTCDataChannel.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
+  s.swift_version    = '4.2'
+  
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'WebViewRTCDataChannel/Classes/**/*'
