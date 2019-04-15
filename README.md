@@ -30,6 +30,7 @@ pod 'WebViewRTCDataChannel'
 
 ## Usage
 
+To create a data channel, first you'll need to fetch and provide ice candidates that include TURN servers.
 ```swift
 // Fetch Ice Servers
 // Use Twilio helper (provided for convenience), or fetch yourself
@@ -47,7 +48,10 @@ private func createWebViewRTCDataChannel(withConfiguration configuration: Config
 }
 
 
-...
+```
+
+Once it's created, you can listen for messages received through the data channel.
+```swift
 // Listen for data channel events
 extension ViewController: WebViewRTCDataChannelDelegate {
 
