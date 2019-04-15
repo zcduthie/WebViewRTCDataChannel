@@ -76,7 +76,7 @@ tldr; WebRTC is **fully supported in Safari**, and **partially supported in WKWe
 ## Roadmap
 
 As it currently stands, the project exposes a basic implementation of a WebRTC DataChannel through a WKWebView. Whilst the aim of the library is to be very basic, there are numerous improvements that can be made. Some of which include:
-- Update example to use GUI that matches the Web GUI included in [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel)
+- Update example to use a GUI that matches the Web GUI included in [WebRTC-Example-DataChannel](https://github.com/zcduthie/WebRTC-Example-RTCDataChannel)
 - Add convenient method for enabling / disabling logging
 
 ## License
