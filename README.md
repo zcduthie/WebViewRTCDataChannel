@@ -28,6 +28,55 @@ it, simply add the following line to your Podfile:
 pod 'WebViewRTCDataChannel'
 ```
 
+## Usage
+
+```swift
+// Fetch Ice Servers
+// Use Twilio helper (provided for convenience), or fetch yourself
+Twilio.fetchNTSToken { (iceServers) in
+    DispatchQueue.main.async { // data channel must be created on main thread
+        createWebViewRTCDataChannel(withConfiguration: Configuration(iceServers: iceServers))
+        }
+}
+
+// Create an instance of the data channel
+private func createWebViewRTCDataChannel(withConfiguration configuration: Configuration) {
+    var webViewRTCDataChannel = WebViewRTCDataChannel(delegate: self,
+                                                    view: view,
+                                                    configuration: configuration)
+}
+
+
+...
+// Listen for data channel events
+extension ViewController: WebViewRTCDataChannelDelegate {
+
+    func webViewRTCDataChannelDidOpen(_ dataChannel: WebViewRTCDataChannel) {
+        print("webViewRTCDataChannelDidOpen")
+    }
+
+    func webViewRTCDataChannelDidClose(_ dataChannel: WebViewRTCDataChannel) {
+        print("webViewRTCDataChannelDidClose")
+    }
+
+    func webViewRTCDataChannel(_ dataChannel: WebViewRTCDataChannel, didError error: String) {
+        print("webViewRTCDataChannel didError: \(error)")
+    }
+
+    func webViewRTCDataChannel(_ dataChannel: WebViewRTCDataChannel, didSetLocalDescription sessionDescription: Dictionary<String, Any>) {
+        signallingChannel.sendSessionDescription(sdp: sessionDescription)
+    }
+
+    func webViewRTCDataChannel(_ dataChannel: WebViewRTCDataChannel, didGetIceCandidate candidate: Dictionary<String, Any>) {
+        signallingChannel.sendIce(ice: candidate)
+    }
+
+    func webViewRTCDataChannel(_ dataChannel: WebViewRTCDataChannel, didReceiveMessage message: String) {
+        print(message)
+    }
+}
+```
+
 ## iOS WebRTC Support Summary
 (Relevant as of March 2019)
 

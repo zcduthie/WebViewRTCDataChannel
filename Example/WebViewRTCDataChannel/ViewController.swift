@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     private func fetchIceServers() {
         Twilio.fetchNTSToken { (iceServers) in
-            DispatchQueue.main.async{
+            DispatchQueue.main.async {
                 self.createWebViewRTCDataChannel(withConfiguration: Configuration(iceServers: iceServers))
             }
         }
